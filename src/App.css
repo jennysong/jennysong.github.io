@@ -1,5 +1,6 @@
 .bg {
     height: 100%;
+    /* background-image: url('./assets/testbg.png'); */
     background-image: url('./assets/macbg-blur.jpg');
     background-position: center;
     background-repeat: no-repeat;
@@ -12,7 +13,7 @@
     position: absolute;
     top: 7px;
     right: 10px;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     letter-spacing: -0.5px;
 }
@@ -33,14 +34,13 @@
     background-image: url('./assets/icon-wifi.png');
 }
 
-.login {
-    padding-top: 20%;
+.middle {
+    padding-top: 34vh;
 }
 
 .center {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
 }
 
 .text-center {
@@ -48,7 +48,7 @@
 }
 
 .name {
-    margin: 20px 0;
+    margin: 24px 0;
     font-size: 15px;
     font-family: 'San Francisco', Helvetica, Arial, san-serif;
 }
@@ -67,6 +67,7 @@
 }
 
 .textbox {
+    font-size: 16px;
     background: #ffffff30;
 	padding: 7px;
     border-radius: 7px;
@@ -84,3 +85,31 @@
 input:focus {
     outline: none;
 }
+
+.bottom {
+    position: absolute;
+    width: 330px;
+    top: 87vh;
+    left: 50vw;
+    margin-left: -165px;
+}
+
+.icon-blocks {
+    display: inline-block;
+    text-align: center;
+}
+
+.icon-blocks img {
+    width: 40px;
+    margin: 0 35px;
+}
+
+.icon-blocks p {
+    font-size: 13px;
+    margin-top: 5px;
+}
+
+::placeholder { 
+    font-size: 13px;
+    color: rgb(209, 209, 209);
+  }

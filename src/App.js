@@ -33,23 +33,29 @@ function App() {
                 <div class='inline'>{date}</div>
                 <div class='inline'>{time}</div>
             </div>
-            <div class='login'>
+            <div class='middle'>
                 <div class='jennysong center' />
-                <div class='text-center name'>Jenny Jieun Song</div>
+                <div class='text-center name'>Jenny Song</div>
                 <form class='text-center' onSubmit={handleSubmit}>
                     <input class='submitbox' type='image' src={require('./assets/icon-aarow2.png')} alt='Submit'/>
-                    <input class='textbox' type='password'/>
+                    <input class='textbox' type='password' placeholder='Enter Password'/>
                     <input class='submitbox' type='image' src={require('./assets/icon-aarow1.png')} alt='Submit'/>
                 </form>
             </div>
-            <div style={{display:'none'}}>
-                <img src={require('./assets/icon-power1.png')}/> Sleep
-                <img src={require('./assets/icon-power2.png')}/> Restart
-                <img src={require('./assets/icon-power3.png')}/> Shut Down
+            <div class='bottom'>
+                <div class='icon-blocks'>
+                    <img src={require('./assets/icon-power1.png')}/>
+                    <p>Sleep</p>
+                </div>
+                <div class='icon-blocks'>
+                    <img src={require('./assets/icon-power2.png')}/>
+                    <p>Restart</p>
+                </div>
+                <div class='icon-blocks'>
+                    <img src={require('./assets/icon-power3.png')}/>
+                    <p>Shut Down</p>
+                </div>
             </div>
-            {/* <a href='https://ca.linkedin.com/in/jennyjsong' target='_blank'>
-                Hello World
-            </a> */}
         </div>
     );
 }
