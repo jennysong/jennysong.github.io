@@ -1,0 +1,64 @@
+$headerHeight: 23px;
+$onClickColor: #3c92f9;
+
+.home {
+    height: 100%;
+    // background-image: url('../assets/testbg3.png');
+    background-image: url('../assets/macbg.jpg');
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+    font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
+
+    .header {
+        height: $headerHeight;
+        background-color: rgba(255, 255, 255, 0.712);
+    }
+
+    .apple-icon-box {
+        background-color: rgba(255, 255, 255, 0);
+        height: $headerHeight;
+        width: 37px;   
+        .apple-icon {
+            padding: 3px 10px;
+            width: 17px;
+            user-select: none;
+            display: block;
+        }
+        .apple-icon.selected {
+            filter: invert(100%);
+        }
+    }
+    .apple-icon-box.selected {
+        background-color: $onClickColor;
+    }
+
+    .text-menu {
+        font-size: 15px;
+        letter-spacing: -0.4px;
+        padding: 0 9.5px;
+        display: block;
+        cursor: default;
+        user-select: none;
+    }
+
+    .text-menu.boldest {
+        font-weight: 900;
+    }
+
+    .text-menu.selected {
+        background-color: $onClickColor;
+        color: white;
+    }
+
+    .header-menu-popup {
+        background-color: rgba(223, 223, 223, 0.795);
+        position: absolute;
+    }
+
+    .header-menu-item {
+
+    }
+
+}

@@ -1,32 +1,29 @@
 import React, { useEffect, useState } from 'react'
 import { connect } from 'react-redux'
-import { showHome } from './actions'
-import './style/Login.css'
+import moment from 'moment'
+import './style/Login.scss'
 
-function Login(props) {
+function Login() {
 
-    const [time, setTime] = useState(0)
-    const [date, setDate] = useState(0)
+    const [time, setTime] = useState(moment().format('LT'))
+    const [date, setDate] = useState(moment().format('ddd MMM D'))
 
     const updateClock = () => {
-        const now = new Date()
-        const currentTime = now.toTimeString()
-        const currentDate = now.toDateString()
-        setTime(currentTime.substring(0, currentTime.indexOf(' ')))
-        setDate(currentDate.substring(0, currentDate.lastIndexOf(' ')))
+        setDate(moment().format('ddd MMM D'))
+        setTime(moment().format('LT'))
     }
 
     const handleSubmit = (event) => {
         event.preventDefault()
+        window.location.assign('/macbook')
+    }
+
+    const openLinkedIn = (event) => {
+        event.preventDefault()
         window.open('https://ca.linkedin.com/in/jennyjsong', '_blank')
     }
 
-    const goHome = () => {
-        props.dispatch(showHome());
-    }
-
     useEffect(() => {
-        updateClock()
         const clockInterval = setInterval(updateClock, 1000)
         return () => {
             clearInterval(clockInterval)
@@ -34,7 +31,7 @@ function Login(props) {
     })
 
     return (
-        <div className='bg'>
+        <div className='login'>
             <div className='header'>
                 <div className='inline'>82%</div>
                 <div className='icon battery inline' />
@@ -46,13 +43,13 @@ function Login(props) {
                 <div className='jennysong center' />
                 <div className='text-center name'>Jenny Song</div>
                 <form className='text-center' onSubmit={handleSubmit}>
-                    <input className='submitbox' type='image' src={require('./assets/icon-aarow2.png')} alt='Submit'/>
+                    <img className='submitbox' src={require('./assets/icon-aarow2.png')} />
                     <input className='textbox' type='password' placeholder='Enter Password'/>
                     <input className='submitbox' type='image' src={require('./assets/icon-aarow1.png')} alt='Submit'/>
                 </form>
             </div>
             <div className='bottom'>
-                <div className='icon-blocks' onClick={goHome}>
+                <div className='icon-blocks'>
                     <img alt='' src={require('./assets/icon-power1.png')}/>
                     <p>Sleep</p>
                 </div>

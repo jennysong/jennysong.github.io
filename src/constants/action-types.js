@@ -1,1 +1,1 @@
-export const SHOW_HOME = "SHOW_HOME";
+export const SELECT_HEADER_MENU = "SELECT_HEADER_MENU";

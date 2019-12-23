@@ -1,14 +1,14 @@
-import { SHOW_HOME } from './constants/action-types'
+import { SELECT_HEADER_MENU } from './constants/action-types'
 
 export const initialState = {
-    show: 'login'
+    selectedHeader: ''
 };
 
 export default function reducer(state = initialState, action) {
     switch (action.type) {
-        case SHOW_HOME: 
+        case SELECT_HEADER_MENU: 
             const newState = {
-                show: 'home'
+                selectedHeader: action.headerMenu
             }
             return newState
         default:

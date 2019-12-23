@@ -1,9 +1,24 @@
-import React from 'react';
+import React from 'react'
+import { connect } from 'react-redux'
+import './style/Home.scss'
+import HeaderMenu from './components/HeaderMenu'
 
-export default function Home() {
+function Home() {
     return (
-        <div>
-            HOME
+        <div className='home'>
+            <div className='header'>
+                <HeaderMenu text='appleIcon' icon />
+                <HeaderMenu text='Finder' bold />
+                <HeaderMenu text='File' />
+                <HeaderMenu text='Edit' />
+                <HeaderMenu text='View' />
+                <HeaderMenu text='Go' />
+                <HeaderMenu text='Window' />
+                <HeaderMenu text='Help' />
+            </div>
         </div>
     )
 }
+
+// const mapStateToProps = state => ({show: state.show})
+export default connect()(Home)
